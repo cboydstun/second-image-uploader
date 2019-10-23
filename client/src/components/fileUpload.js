@@ -10,11 +10,9 @@ const FileUpload = () => {
     const [message, setMessage] = useState('');
     const [uploadPercentage, setUploadPercentage] = useState(0);
 
-
     const onChange = e => {
         setFile(e.target.files[0]);
         setFilename(e.target.files[0].name);
-
     }
 
     const onSubmit = async e => {
@@ -33,8 +31,6 @@ const FileUpload = () => {
                                     //Clear Percentage
                 setTimeout(()=> setUploadPercentage(0), 10000);
                 }
-
-
             });
 
             const {fileName, filePath} = res.data;
@@ -50,7 +46,6 @@ const FileUpload = () => {
             }
         }
     }
-
 
     return (
         <Fragment>
@@ -77,7 +72,6 @@ const FileUpload = () => {
                     </div>
                 </div> : null }
             </form>
-
         </Fragment>
     )
 }
